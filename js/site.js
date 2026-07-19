@@ -274,7 +274,7 @@ function renderEducation() {
       button.textContent = documentItem.label;
       button.addEventListener('click', () => {
         if (documentItem === thesis.fullDocument) {
-          window.location.href = documentItem.url || documentItem.downloadUrl;
+          window.open(documentItem.url || documentItem.downloadUrl, '_blank', 'noopener');
           return;
         }
         openDocument(documentItem);
